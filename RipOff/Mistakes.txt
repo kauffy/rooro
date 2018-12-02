@@ -1,0 +1,12 @@
+This is a list of errors and lessons learned along the way!
+
+#Let classes handle the arrays and lists to which they belong. Don't externally create an array and then use
+e[n] = New E.
+
+	Whycome is that then the class itself isn't really aware of the list, and also it forces external code to keep track of the class itself.
+	It seems like classes should really have their own built-in instance-wranglin'. You'd just tell the class you need more of what it does, and it's all "Fine."
+	
+
+	
+#When copying code from elsewhere, really study it closely. Just because your version doesn't work doesn't mean you can never figure it out. Code is super-fickle. 
+	It will break whenever it wants and with very little reason.

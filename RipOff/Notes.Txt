@@ -1,0 +1,112 @@
+
+TODO:
+X Add brakes,reverse to player #FIXME (Hartlef supposedly fixed) STRAIGHT reverse works, when you turn, it bounces.
+Fix player turning in reverse (still has a bounce to it).
+
+X Add functionality to roWave-- declare a new Wave and have it handle the spawnings, etc.
+Add booty-theft scorekeeping
+Add enemy-destroyed scorekeeping
+
+
+
+Add an Escape Zone object-- these are scattered, of varying sizes.
+	They collide with booty (this is what scores points for the enemy)
+	They are suitable for targeting for nav.
+
+
+Slow enemy down when towing, depending upon enemy type-- the faster the acceleration, the greater the slowing. Heavies aren't slowed at all.	
+	
+Add acceleration/deceleration to AI. Slow down for large turns to expedite turning?
+
+
+Fix TurnAwayFrom so it doesn't always spin right.
+
+
+Collision:
+X	Player missile to enemy tank.
+		Add VFX
+		Add SFX
+		Add Score
+		Do accounting for wave
+X	Enemy tank to booty.
+		Add booty pickup
+		Add VFX
+		Add SFX
+		Add accounting for wave
+
+Enemy AI:
+X	Set up randomized off-screen locations
+	Chase the player
+	Avoid colliding with another tank (unless I'm in kill mode and it's a player).
+
+Add a sussgun mode: hold down fire and get slow rate of fire flakblast.	
+	
+Eye Candy:
+	Replace FPO graphics.
+X	Have booty spin.
+	Have booty pulse/glow.
+	Add a background?
+	Add booty variety (different sizes/shapes, colors, behaviors, weights).
+		
+Enhancers:
+	Power-Ups:
+		Invincible.
+		Enemy-seeking missiles.
+		Booty restore! (Returns all scattered booty to home position)
+	Mods:
+		Gravity sinks-- draw booty towards them. In Center field, advantage to player. Out toward edges, advantage to enemy.
+		Tower-Defense elements?
+		Order items from drop-ship-- tow them into place.
+
+Future ideas:
+	Multiple maps, with differing terrain?
+	Multiplayer.
+	
+	The "Tank Defense" genre-- generally, tower defense (passive defenses) combined with a player's in-game avatar. Key distinction, is player's avatar can take damage also.
+	Balanced so that perfect passive defense is ideal, but never quite achievable through all waves.
+		Orcs Must Die
+		Battlezone (the remake).
+		
+
+THINGS THAT GOT DONE:
+X Expand playfield/canvas size.
+X No wrap on playfield.
+X Alter vehicle driving dynamics so vehicle behaves like it's on treads.
+X Firing bullets.
+X Scattering booty.
+
+X Cap max speed for player tank
+
+X	Have enemies just move along, target practice style for now.
+Collision:
+X	Player missile to enemy tank.
+X	Enemy tank to booty.
+X Alter driving dynamics so the slower moving, the better the turning radius (speed 0 = very fast spins)
+
+
+X Move Booty collection handling into Booty class (Partly done)
+XMove Enemy collection handling into Enemy class (Partly done)
+XRename b array to booty OR eliminate
+XRename p array to player OR eliminate
+XRename e array to enemy OR eliminate
+X Improve target selection, so not all enemies are going after the first booty in the list. Add a PickRandom from the Loose List.
+X	Pick a booty and drive toward it.
+X		Add choosing booty at random.
+X	Fix code to work with more than one enemy at a time
+
+X	Able to pick up a booty.
+X	Have a booty, let's get out of here.
+X	Pick a new target if my booty unavailable (gone, or I'm not getting closer to it).
+
+Notes from Original Game: RipOff
+
+Mechanics:
+OG plays too fast-- optimized for taking money. Game is too hard for 1P after 60 seconds or so.
+When P1 collides with border, vehicle speed along that axis is zeroed-- vehicle can still slide along the border.
+Driving over the booty messes with steering.
+E AI divides attention-- goes for booty if closer.
+E can drive over each other (at least, they do in the beginning) and seem to avoid each-other once on the field. UPDATE: Strictly, they do not avoid each other and can overlap, but seem to avoid doing so.
+
+
+Sounds:
+Background noise heightens with level
